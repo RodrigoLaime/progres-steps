@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: rgba(2, 90, 50, 10); guardar para otro trabajo */
+  background: rgba(0, 90, 60, 10);
+  ;
+  font-family: sans-serif;
+}
+
+.progress {
+  background: white;
+  width: 100%;
+  max-width: 768px;
+  min-width: 320px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(40, 40, 40);
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 3px solid lightgray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  /* sobrepone al contenedor que lo sobrepone */
+  color: rgba(128, 128, 128, 0.5);
+  font-weight: 600;
+}
+
+.steps::before {
+  content: "";
+  /*le especificamos que no tenga nada dentro*/
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: lightgray;
+  top: 50%;
+}
+
+.barra {
+  position: absolute;
+  width: 0;
+  background: rgb(0, 255, 150);
+  height: 4px;
+  top: 50%;
+  transition: width .3s ease-in-out;
+}
+
+.step.active {
+  border: 3px solid rgb(136, 255, 205);
+  background: rgb(0, 255, 150);
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+
+
+.navigation {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  border: 3px solid rgb(136, 255, 205);
+  background: rgb(0, 255, 150);
+  border-radius: 5px;
+}
+
+#p {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+  color: lightgray;
+  border-radius: 100px;
+  border: 3px solid;
+  font-weight: bolder;
+}
+
+#p:hover {
+  color: rgb(0, 255, 150);
+  font-weight: bold;
+  border: 3px solid rgb(0, 255, 150);
+  transition: 0.5s ease-in-out;
+}
+
+/* disable es desabilitar un elemento en html */
+.button:disabled {
+  opacity: .7;
+  /* cursor: initial; */
+}
