@@ -51,18 +51,28 @@ function updateProgress() {
       break;
     case 2:
       parrafo.innerText = 'STEP DOS';
+      parrafo.style.border = '3px solid green';
+      parrafo.style.color = 'green';
       break;
     case 3:
       parrafo.innerText = "STEP TRES";
+      parrafo.style.border = '3px solid blue';
+      parrafo.style.color = 'blue';
       break;
     case 4:
       parrafo.innerText = "STEP CUATRO";
+      parrafo.style.border = '3px solid orange';
+      parrafo.style.color = 'orange';
       break;
     case 5:
       parrafo.innerText = "STEP CINCO";
+      parrafo.style.border = '3px solid violet';
+      parrafo.style.color = 'violet';
       break;
     case 6:
       parrafo.innerText = "STEP SEIS";
+      parrafo.style.border = '3px solid aqua';
+      parrafo.style.color = 'aqua';
       break;
   }
 
